@@ -16,19 +16,19 @@ export default function Login() {
             <StatusBar barStyle={'dark-content'} backgroundColor={color.background} />
             <SafeAreaView style={{flex:1}}>
                <Image
-               style={{width:width(100),height:height(20)}}
+               style={styles.headerImage}
                source={{uri:'https://images.unsplash.com/photo-1559416548-2b5131d481fb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60'}} />
-            <View style={{width:width(30),height:height(16),alignSelf:'center',marginTop:-height(8),backgroundColor:color.gray,borderRadius:20}}/>
-            <Text style={{width:width(30),alignSelf:'center',color:color.textBlack,textAlign:'center',marginTop:height(2),fontSize:width(4),marginBottom:height(8)}}>تسجيل الدخول</Text>
-           <View style={{height:height(19),justifyContent:'space-between'}}>
+            <View style={styles.heading}/>
+            <Text style={styles.headingText}>تسجيل الدخول</Text>
+           <View style={styles.textInputContainer}>
             <TextInput placeholder='رقم الهاتف' />
             <TextInput placeholder='كلمة المرور' />
             </View>
-            <Text style={{color:color.textBlack,marginTop:height(1),fontSize:width(4),paddingRight:height(8)}}>هل نسيت كلمة المرور</Text>
+            <Text style={styles.forgot}>هل نسيت كلمة المرور</Text>
             <Button onPress={()=>dispatch(login({username:'das'}))} title='تسجيل دخول'/>
-            <View style={{flexDirection:'row',width:width(85),alignSelf:'center'}}>
-                <Button title='Google' containerStyles={{backgroundColor:color.red,width:'45%',borderColor:'transparent'}}/>
-                <Button title='Facebook' containerStyles={{backgroundColor:color.blue,width:'45%',borderColor:'transparent'}}/>
+            <View style={styles.authButton}>
+                <Button title='Google' containerStyles={styles.google}/>
+                <Button title='Facebook' containerStyles={styles.ffacebook}/>
             </View>
             <Button labelStyles={{color:color.yellow}} title='انشاء حساب جديد' containerStyles={{backgroundColor:color.white}}/>
             </SafeAreaView>
