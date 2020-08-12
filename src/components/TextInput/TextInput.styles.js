@@ -1,16 +1,19 @@
 import {StyleSheet} from 'react-native';
 import color from '../../utills/Colors';
 import {totalSize, height, width} from 'react-native-dimension';
+import { Colors } from 'react-native/Libraries/NewAppScreen';
 
 const styles = StyleSheet.create({
   container: {
     alignItems: 'center',
-    borderRadius: width(12),
+    borderRadius: width(4),
     backgroundColor: color.white,
+    borderWidth:0.7,
+    borderColor:color.textBlack,
     width: '80%',
     alignSelf: 'center',
     marginVertical:1,
-    height:height(6.0),
+    height:height(8),
     paddingHorizontal:'5%',
     flexDirection:'row',
     justifyContent:'space-between'
